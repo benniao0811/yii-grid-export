@@ -15,11 +15,8 @@ $url = Url::toRoute(['supplier/export-show']);
 <div>
     <p>
         <?= Html::a('添加', ['add'], ['class' => 'btn btn-success']) ?>
-
         <?= Html::a('导出', 'javascript:;', [
             'class' => 'btn btn-success',
-//            'onclick' => "location.href='$url'.replace('CheckAll',document.getElementsByClassName('select-on-check-all')[0].checked).replace('Ids',$('#grid').yiiGridView('getSelectedRows'));return false;",
-//            'onclick' => "location.href='$url'.replace('CheckAll',$('[name=selection_all]').is(':checked')).replace('Ids',$('#grid').yiiGridView('getSelectedRows'));return false;",
             'onclick' => "formExport(this);",
         ]) ?>
     </p>
